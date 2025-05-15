@@ -1,0 +1,97 @@
+!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amiibo Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #e60012;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+    .banner {
+      background-color: #000;
+      color: #fff;
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+    .description-box {
+      background-color: #fff;
+      padding: 1rem 2rem;
+      margin: 2rem auto 1rem;
+      border-radius: 10px;
+      max-width: 700px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+    .description-box p {
+      margin: 0;
+      font-size: 1rem;
+      color: #333;
+    }
+    .amiibo-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      padding: 15px;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .amiibo-card img {
+      height: 180px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <h1 class="mb-0">Amiibo Gallery</h1>
+  </div>
+
+  <div class="description-box">
+    <p>
+      Nintendo's interactive figures and cards, known as <strong>amiibo</strong>, let users access additional features or content in games that are compatible with the Switch, 3DS, and Wii U.
+    </p>
+  </div>
+
+  <div class="container my-5">
+    <div class="text-center mb-4">
+      <button class="btn btn-light px-4 py-2 rounded-4 fw-bold" onclick="loadAmiibos()">Load Amiibos</button>
+    </div>
+    <div class="row" id="amiiboContainer"></div>
+  </div>
+
+  <script>
+    async function loadAmiibos() {
+      const response = await fetch('https://amiiboapi.com/api/amiibo/');
+      const data = await response.json();
+      const amiibos = data.amiibo.slice(0, 12);
+      const container = document.getElementById('amiiboContainer');
+      container.innerHTML = '';
+
+      for (let i = 0; i < amiibos.length; i++) {
+        const item = amiibos[i];
+        const card = `
+          <div class="col-md-4 col-lg-3 mb-4 d-flex">
+            <div class="amiibo-card w-100">
+              <img src="${item.image}" alt="${item.name}" class="img-fluid">
+              <h5>${item.name}</h5>
+              <p><strong>Series:</strong> ${item.amiiboSeries}</p>
+            </div>
+          </div>
+        `;
+        container.innerHTML += card;
+      }
+    }
+  </script>
+
+</body>
+</html>
