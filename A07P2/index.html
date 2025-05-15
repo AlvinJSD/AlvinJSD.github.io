@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paintings Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #2c3e50, #34495e);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background-color: white;
+      color: black;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-4">
+    <h1 class="text-center mb-4">Paintings Gallery</h1>
+    <div class="row" id="paintingsContainer"></div>
+    <div class="text-center mt-4">
+      <a href="../index.html" class="btn btn-dark">← Return to Profile</a>
+    </div>
+  </div>
+  <script>
+    async function loadPaintings() {
+      const response = await fetch('https://api.artic.edu/api/v1/artworks/search?q=painting&limit=12&fields=id,title,image_id,artist_title');
+      const data = await response.json();
+      const container = document.getElementById('paintingsContainer');
+      for (let i = 0; i < data.data.length; i++) {
+        const item = data.data[i];
+        const imageUrl = "https://www.artic.edu/iiif/2/" + item.image_id + "/full/843,/0/default.jpg";
+        const card = 
+          '<div class="col-md-4 mb-4">' +
+            '<div class="card h-100">' +
+              '<img src="' + imageUrl + '" class="card-img-top" alt="' + item.title + '">' +
+              '<div class="card-body">' +
+                '<h5 class="card-title">' + item.title + '</h5>' +
+                '<p class="card-text">' + (item.artist_title || "Unknown Artist") + '</p>' +
+                '<a href="view.html?id=' + item.id + '" class="btn btn-dark">View Details</a>' +
+              '</div>' +
+            '</div>' +
+          '</div>';
+        container.innerHTML += card;
+      }
+    }
+    loadPaintings();
+  </script>
+</body>
+</html>
