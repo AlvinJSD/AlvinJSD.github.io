@@ -4,126 +4,252 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>CoDeVin</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #222, #1d1d1d, #222);
+      color: white;
+      font-family: 'Share Tech', sans-serif;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    header {
+      text-align: start;
+      padding: 10px 0px 0px 50px;
+      color: rgb(248, 232, 8);
+    }
+
+    .nav-options {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      padding-bottom: 10px;
+      font-size: larger;
+      font-weight: 500;
+      flex-wrap: wrap;
+    }
+
+    .nav-link {
+      color: white;
+      text-decoration: none;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: rgb(248, 232, 8);
+      transform: scale(1.1);
+    }
+
+    .profile-section {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid rgba(16, 199, 107, 0.308);
+      margin-bottom: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.06);
+    }
+
+    .name-text {
+      text-align: center;
+    }
+
+    .box {
+      background-color: rgba(255, 255, 255, 0.07);
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      color: white;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .box:hover {
+      transform: scale(1.03);
+    }
+
+    .lang-box {
+      background-color: rgba(255, 255, 255, 0.12);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: transform 0.3s ease;
+    }
+
+    .lang-box:hover {
+      transform: scale(1.1);
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 60px 0 20px;
+      font-weight: bold;
+    }
+
+    .icon {
+      font-size: 30px;
+      margin: 10px;
+    }
+
+    .project-box {
+      background-color: rgba(255, 255, 255, 0.07);
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
+
+    .project-box:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      transform: scaleX(1.1);
+      color: rgb(248, 232, 0);
+    }
+  </style>
 </head>
 
 <body>
-  <div class="container-fluid p-2" style="background-color: #282876;">
-    <div class="row">
-      <div class="col text-start text-white">
-        <h4 class="fw-bold">Welcome to my Portfolio</h4>
-      </div>
-    </div>
-  </div>
 
-  <div class="container-fluid p-2" style="background-color: #282876;">
-    <div class="row text-start">
-      <div class="col-auto">
-        <a href="/Profile/index.html" class="text-white text-decoration-none me-3">Home</a>
-      </div>
-      <div class="col-auto">
-        <a href="aboutme.html" class="text-white text-decoration-none me-3">About Me</a>
-      </div>
-      <div class="col-auto">
-        <a href="" class="text-white text-decoration-none">More</a>
-      </div>
-    </div>
-  </div>
+  <header>
+    <h1>CoDeVin</h1>
+  </header>
 
-  <div class="container my-4">
-    <div class="row">
-      <div class="col-md-6">
-        <h1>Alvin Joseph E. San Diego</h1>
-      </div>
-    </div>
-  </div>
+  <nav class="nav-options">
+    <a href="#profile" class="nav-link">Profile</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </nav>
 
-  <div class="container-fluid my-5">
-    <div class="row d-flex flex-wrap align-items-start">
-      <div class="col-12 col-lg-8">
-        <div class="row g-4">
-          <div class="col-12 col-md-6">
-            <div class="card h-100 shadow rounded-4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Activity 4</h5>
-                <p class="card-text">Nintendo</p>
-                <a href="../A04/index.html" class="btn btn-primary">Open</a>
-              </div>
-            </div>
+  <!-- Profile area -->
+  <section id="profile" class="profile-section">
+    <img src="img/Vin.jpg" alt="Profile Picture" class="profile-img">
+    <p class="name-text">Alvin Joseph San Diego (Vin)</p>
+  </section>
+
+  <!-- About area -->
+  <section id="about" class="profile-section">
+    <div class="section-title">About me</div>
+    <div class="container-fluid">
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-8">
+          <div class="box">
+            Inspired by the notion that I can create tools, find solutions to issues, and realize concepts on the web
+            using only code. I'm eager to continue learning, developing, and making a contribution to the dynamic field
+            of web development.
           </div>
-          <div class="col-12 col-md-6">
-            <div class="card h-100 shadow rounded-4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Activity 5</h5>
-                <p class="card-text">Switzerland</p>
-                <a href="../A05/index.html" class="btn btn-primary">Open</a>
-              </div>
+        </div>
+        <div class="col-md-4">
+          <div class="box">
+            <h5 class="mb-3">Developing Proficiency In</h5>
+            <div class="d-flex flex-wrap gap-2 justify-content-center">
+              <div class="lang-box">C++</div>
+              <div class="lang-box">C</div>
+              <div class="lang-box">Java</div>
+              <div class="lang-box">Python</div>
+              <div class="lang-box">HTML</div>
+              <div class="lang-box">CSS</div>
+              <div class="lang-box">JavaScript</div>
+              <div class="lang-box">GIT</div>
             </div>
           </div>
         </div>
       </div>
-    <div class="container-fluid my-5">
-    <div class="row d-flex flex-wrap align-items-start">
-      <div class="col-12 col-lg-8">
-        <div class="row g-4">
-          <div class="col-12 col-md-6">
-            <div class="card h-100 shadow rounded-4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Activity 6</h5>
-                <p class="card-text">Gallery</p>
-                <a href="../A06/index.html" class="btn btn-primary">Open</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-md-6">
-            <div class="card h-100 shadow rounded-4">
-              <div class="card-body text-center">
-                <h5 class="card-title">Activity 6P2</h5>
-                <p class="card-text">API</p>
-                <a href="../A06P2/index.html" class="btn btn-primary">Open</a>
-              </div>
-            </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="profile-section">
+    <div class="section-title">Projects</div>
+    <div class="container my-5">
+      <div class="row g-4 justify-content-center">
+
+        <div class="col-md-4">
+          <div class="box h-100">
+            <h5 class="text-warning">GameBoy</h5>
+            <a href="A04/index.html" class="project-box">Enter</a>
           </div>
         </div>
-      </div>
-      <div class="container-fluid my-5">
-        <div class="row d-flex flex-wrap align-items-start">
-          <div class="col-12 col-lg-8">
-            <div class="row g-4">
-              <div class="col-12 col-md-6">
-                <div class="card h-100 shadow rounded-4">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Activity 7P2</h5>
-                    <p class="card-text">Get URL</p>
-                    <a href="../A07P2/index.html" class="btn btn-primary">Open</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-12 col-md-6">
-                <div class="card h-100 shadow rounded-4">
-                  <div class="card-body text-center">
-                    <h5 class="card-title">Activity 8</h5>
-                    <p class="card-text">comming soon...</p>
-                    <a href="###" class="btn btn-primary">Open</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+        <div class="col-md-4">
+          <div class="box h-100">
+            <h5 class="text-warning">Switzerland</h5>
+            <a href="A05/index.html" class="project-box">Enter</a>
           </div>
-      <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-        <div class="card rounded-4 shadow" style="overflow: hidden; height: 100%;">
-          <img src="img/Alvin.jpg" class="rounded-4 w-100" alt="Alvin"
-            style="height: 100%; object-fit: cover; max-height: 600px;">
+        </div>
+
+        <div class="col-md-4">
+          <div class="box h-100">
+            <h5 class="text-warning">Gallery</h5>
+            <a href="A06/index.html" class="project-box">Enter</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="box h-100">
+            <h5 class="text-warning">Amiibo</h5>
+            <a href="A06P2/index.html" class="project-box">Enter</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="box h-100">
+            <h5 class="text-warning">Chicago Art Gallery</h5>
+            <a href="A07P2/index.html" class="project-box">Enter</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<br>
+<br>
+<br>
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <div class="row mt-4 justify-content-center">
+        <div class="col-12">
+          <div class="box">
+            Contact
+            <div class="icon"><i class="fa-brands fa-github"></i></div>
+            <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
