@@ -4,260 +4,165 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CoDeVin</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>CoDeVin | Alvin Joseph San Diego</title>
+  <meta name="description" content="Portfolio of Alvin Joseph San Diego (Vin), a web developer.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background: linear-gradient(to right, #222, #1d1d1d, #222);
-      color: white;
-      font-family: 'Share Tech', sans-serif;
-      min-height: 100vh;
-      margin: 0;
-    }
-
-    header {
-      text-align: start;
-      padding: 10px 0px 0px 50px;
-      color: rgb(248, 232, 8);
-    }
-
-    .nav-options {
-      display: flex;
-      justify-content: center;
-      gap: 100px;
-      padding-bottom: 10px;
-      font-size: larger;
-      font-weight: 500;
-      flex-wrap: wrap;
-    }
-
-    .nav-link {
-      color: white;
-      text-decoration: none;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .nav-link:hover {
-      color: rgb(248, 232, 8);
-      transform: scale(1.1);
-    }
-
-    .profile-section {
-      min-height: 80vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid rgba(16, 199, 107, 0.308);
-      margin-bottom: 20px;
-      transition: transform 0.5s ease;
-    }
-
-    .profile-img:hover {
-      transform: scale(1.06);
-    }
-
-    .name-text {
-      text-align: center;
-    }
-
-    .box {
-      background-color: rgba(255, 255, 255, 0.07);
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-      color: white;
-      height: 100%;
-      box-shadow: 0 3px 3px rgb(179, 179, 179);
-      transition: transform 0.3s ease;
-    }
-
-    .box:hover {
-      transform: scale(1.03);
-    }
-
-    .lang-box {
-      background-color: rgba(255, 255, 255, 0.12);
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      white-space: nowrap;
-      transition: transform 0.3s ease;
-    }
-
-    .lang-box:hover {
-      transform: scale(1.1);
-    }
-
-    .section-title {
-      text-align: center;
-      margin: 60px 0 20px;
-      font-weight: bold;
-    }
-
-    .icon {
-      font-size: 30px;
-      margin: 10px;
-    }
-
-    .project-box {
-      background-color: rgba(255, 255, 255, 0.07);
-      color: white;
-      text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 8px;
-      display: inline-block;
-      transition: all 0.3s ease;
-    }
-
-    .project-box:hover {
-      background-color: rgba(255, 255, 255, 0.15);
-      transform: scaleX(1.1);
-      color: rgb(248, 232, 0);
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="glow" aria-hidden="true"></div>
 
-  <header>
-    <h1>CoDeVin</h1>
-  </header>
-
-  <nav class="nav-options">
-    <a href="#profile" class="nav-link">Profile</a>
-    <a href="#about" class="nav-link">About</a>
-    <a href="#projects" class="nav-link">Projects</a>
-    <a href="#contact" class="nav-link">Contact</a>
+  <nav>
+    <div class="wrap">
+      <a href="#profile" class="logo">CoDeVin</a>
+      <div class="links">
+        <a href="#profile">Profile</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </nav>
 
-  <!-- Profile area -->
-  <section id="profile" class="profile-section">
-    <img src="img/Vin.jpg" alt="Profile Picture" class="profile-img">
-    <p class="name-text">Alvin Joseph San Diego (Vin)</p>
-  </section>
-
-  <!-- About area -->
-  <section id="about" class="profile-section">
-    <div class="section-title">About me</div>
-    <div class="container-fluid">
-      <div class="row g-4 justify-content-center">
-        <div class="col-md-8">
-          <div class="box">
-            Inspired by the notion that I can create tools, find solutions to issues, and realize concepts on the web
-            using only code. I'm eager to continue learning, developing, and making a contribution to the dynamic field
-            of web development.
+  <main>
+    <!-- Profile -->
+    <section id="profile" class="hero">
+      <div class="wrap">
+        <div>
+          <h1>Hi, I'm Vin.</h1>
+          <p class="role">I'm a <b id="typed"></b><span class="caret"></span></p>
+          <p class="intro">I'm Alvin Joseph San Diego. I build tools, solve problems, and turn ideas into working websites using code.</p>
+          <div class="cta">
+            <a href="#projects" class="btn primary"><i class="fa-solid fa-code"></i> See my projects</a>
+            <a href="#contact" class="btn"><i class="fa-regular fa-envelope"></i> Get in touch</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="box">
-            <h5 class="mb-3">Developing Proficiency In</h5>
-            <div class="d-flex flex-wrap gap-2 justify-content-center">
-              <div class="lang-box">C++</div>
-              <div class="lang-box">C</div>
-              <div class="lang-box">Java</div>
-              <div class="lang-box">Python</div>
-              <div class="lang-box">HTML</div>
-              <div class="lang-box">CSS</div>
-              <div class="lang-box">JavaScript</div>
-              <div class="lang-box">GIT</div>
+
+        <div class="portrait">
+          <div class="ring"><img src="img/Vin.jpg" alt="Portrait of Alvin Joseph San Diego"></div>
+          <div class="code-card" aria-hidden="true">
+            <div class="code-bar"><i></i><i></i><i></i></div>
+<pre><span class="k">const</span> vin = {
+  name: <span class="s">"Alvin Joseph San Diego"</span>,
+  role: <span class="s">"Web Developer"</span>,
+  learning: <span class="k">true</span>
+};</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <h2 class="title">About me</h2>
+        <div class="about-grid">
+          <div class="panel">
+            <h3>What drives me</h3>
+            <p>I'm inspired by the idea that I can create tools, find solutions to problems, and bring concepts to life on the web using only code. I want to keep learning, building, and contributing to the world of web development.</p>
+          </div>
+          <div class="panel">
+            <h3>Developing proficiency in</h3>
+            <div class="chips">
+              <span class="chip"><i class="fa-solid fa-c"></i>C</span>
+              <span class="chip"><i class="fa-solid fa-code"></i>C++</span>
+              <span class="chip"><i class="fa-brands fa-java"></i>Java</span>
+              <span class="chip"><i class="fa-brands fa-python"></i>Python</span>
+              <span class="chip"><i class="fa-brands fa-html5"></i>HTML</span>
+              <span class="chip"><i class="fa-brands fa-css3-alt"></i>CSS</span>
+              <span class="chip"><i class="fa-brands fa-js"></i>JavaScript</span>
+              <span class="chip"><i class="fa-brands fa-git-alt"></i>Git</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="profile-section">
-    <div class="section-title">Projects</div>
-    <div class="container my-5">
-      <div class="row g-4 justify-content-center">
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <h2 class="title">Projects</h2>
+        <div class="grid">
 
-        <div class="col-md-4">
-          <div class="box h-100">
-            <h5 class="text-warning">GameBoy</h5>
-            <a href="A04/index.html" class="project-box">Enter</a>
-          </div>
-        </div>
+          <!-- EDIT the descriptions and tags below to match what each project really is -->
+          <article class="card">
+            <i class="fa-solid fa-gamepad ico"></i>
+            <h3>GameBoy</h3>
+            <p>A GameBoy-inspired interface built with HTML, CSS and JavaScript.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="A04/index.html" class="visit stretch">View project <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
 
-        <div class="col-md-4">
-          <div class="box h-100">
-            <h5 class="text-warning">Switzerland</h5>
-            <a href="A05/index.html" class="project-box">Enter</a>
-          </div>
-        </div>
+          <article class="card">
+            <i class="fa-solid fa-mountain ico"></i>
+            <h3>Switzerland</h3>
+            <p>A travel-style page showcasing Switzerland with a clean layout.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <a href="A05/index.html" class="visit stretch">View project <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
 
-        <div class="col-md-4">
-          <div class="box h-100">
-            <h5 class="text-warning">Gallery</h5>
-            <a href="A06/index.html" class="project-box">Enter</a>
-          </div>
-        </div>
+          <article class="card">
+            <i class="fa-regular fa-images ico"></i>
+            <h3>Gallery</h3>
+            <p>An image gallery for browsing a collection of photos.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="A06/index.html" class="visit stretch">View project <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
 
-        <div class="col-md-4">
-          <div class="box h-100">
-            <h5 class="text-warning">Amiibo</h5>
-            <a href="A06P2/index.html" class="project-box">Enter</a>
-          </div>
-        </div>
+          <article class="card">
+            <i class="fa-solid fa-ghost ico"></i>
+            <h3>Amiibo</h3>
+            <p>A collection browser for Amiibo figures.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="A06P2/index.html" class="visit stretch">View project <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
 
-        <div class="col-md-4">
-          <div class="box h-100">
-            <h5 class="text-warning">Chicago Art Gallery</h5>
-            <a href="A07P2/index.html" class="project-box">Enter</a>
-          </div>
-        </div>
+          <article class="card">
+            <i class="fa-solid fa-palette ico"></i>
+            <h3>Chicago Art Gallery</h3>
+            <p>An art gallery page featuring artworks from Chicago.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <a href="A07P2/index.html" class="visit stretch">View project <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
 
-        <div class="col-md-4">
-          <div class="box h-100">
-            <h5 class="text-warning">Parallax</h5>
-            <a href="A08/EZ-Parallax-master/EZ-Parallax-master/banner.html" class="project-box">Enter</a>
-          </div>
-        </div>
+          <article class="card">
+            <i class="fa-solid fa-layer-group ico"></i>
+            <h3>Parallax</h3>
+            <p>A banner with a layered scrolling (parallax) effect.</p>
+            <div class="tags"><span>HTML</span><span>CSS</span></div>
+            <a href="A08/EZ-Parallax-master/EZ-Parallax-master/banner.html" class="visit stretch">View project <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
 
-      </div>
-    </div>
-  </section>
-
-<br>
-<br>
-<br>
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <div class="row mt-4 justify-content-center">
-        <div class="col-12">
-          <div class="box">
-            Contact
-            <div class="icon"><i class="fa-brands fa-github"></i></div>
-            <div class="icon"><i class="fa-brands fa-facebook"></i></div>
-          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="wrap">
+        <h2 class="title">Contact</h2>
+        <p>Want to work together or just say hi? Reach out on any of these.</p>
+        <div class="socials">
+          <!-- REPLACE the # in each link with your real profile URL -->
+          <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <span class="dot"></span>Built with code by Vin
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
